@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  color: #eaf7ff;
+  background: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.tracker {
+  width: min(1280px, calc(100vw - 64px));
+  height: min(820px, calc(100vh - 64px));
+  margin: 32px auto;
+  padding: 22px;
+  background: linear-gradient(180deg, #091226, #0d1734);
+  border: 1px solid rgba(94, 231, 255, 0.24);
+  border-radius: 10px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.tracker-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+h1 {
+  margin: 0;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 5px 0 0;
+  color: rgba(234, 247, 255, 0.68);
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  color: #fff;
+  background: #13204a;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d2f68;
+}
+
+.head-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+
+.tab.active {
+  background: #35a9cc;
+}
+
+.panel {
+  display: none;
+  height: calc(100% - 130px);
+  overflow: auto;
+}
+
+.panel.active {
+  display: block;
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 12px;
+}
+
+.table-wrap {
+  overflow: auto;
+  border: 1px solid rgba(94, 231, 255, 0.18);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  min-width: 920px;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.03);
+}
+
+th,
+td {
+  padding: 11px 12px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: left;
+  vertical-align: top;
+  font-size: 13px;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: #122253;
+  color: #8eeaff;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ban-form {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(140px, 1fr));
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+input {
+  width: 100%;
+  border: 1px solid rgba(94, 231, 255, 0.22);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #101b3b;
+}
+
+.error {
+  padding: 14px;
+  color: #fecaca;
+}
