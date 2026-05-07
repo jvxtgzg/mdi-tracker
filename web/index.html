@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MDI Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main id="app" class="tracker hidden">
+    <header class="tracker-head">
+      <div>
+        <h1>MDI Tracker</h1>
+        <p>Live players, characters, bans, and framework map</p>
+      </div>
+      <div class="head-actions">
+        <button id="refresh-btn">Refresh</button>
+        <button id="close-btn">Close</button>
+      </div>
+    </header>
+
+    <nav class="tabs">
+      <button class="tab active" data-tab="live">Live Players</button>
+      <button class="tab" data-tab="characters">Characters</button>
+      <button class="tab" data-tab="bans">Bans</button>
+      <button class="tab" data-tab="map">Framework Map</button>
+    </nav>
+
+    <section class="panel active" id="tab-live">
+      <div class="panel-title">Live Players</div>
+      <div id="live-content" class="table-wrap"></div>
+    </section>
+
+    <section class="panel" id="tab-characters">
+      <div class="panel-title">Characters</div>
+      <div id="characters-content" class="table-wrap"></div>
+    </section>
+
+    <section class="panel" id="tab-bans">
+      <div class="panel-title">Bans</div>
+      <form id="ban-form" class="ban-form">
+        <input name="name" placeholder="name" />
+        <input name="license" placeholder="license" />
+        <input name="discord" placeholder="discord" />
+        <input name="ip" placeholder="ip" />
+        <input name="reason" placeholder="reason" />
+        <input name="expire" type="number" placeholder="expire timestamp" />
+        <input name="bannedby" placeholder="bannedby" />
+        <button type="submit">Insert Ban</button>
+      </form>
+      <div id="bans-content" class="table-wrap"></div>
+    </section>
+
+    <section class="panel" id="tab-map">
+      <div class="panel-title">Framework Map</div>
+      <div id="map-content" class="table-wrap"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
